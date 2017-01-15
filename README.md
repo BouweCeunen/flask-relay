@@ -25,4 +25,4 @@ $ python relay.py 22 Kitchen 04 Livingroom 27 Garage
 #### Interface
 Go to localhost:5000 in your webbrowser ( or change the Flask port in the python relay file ) and try it out!
 
-[![](http://www.bouweceunen.com/flaskrelay/interface.png)](http://www.raspberrypi-spy.co.uk/wp-content/uploads/2012/06/Raspberry-Pi-GPIO-Layout-Model-B-Plus-rotated-2700x900.png)
+[![](http://www.bouweceunen.com/flaskrelay/interface.png)](http://www.bouweceunen.com/flaskrelay/interface.png)
