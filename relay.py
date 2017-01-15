@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, g
 from flask import render_template
 from nocache import nocache
 import sys
@@ -6,8 +6,6 @@ from relay_pi import Relay
 
 app = Flask(__name__)
 relays = []
-ports = []
-names = []
 
 @app.route('/static/styles/')
 @nocache
@@ -22,12 +20,14 @@ def static_js(path):
 @app.route('/con<string:relay_id>/<string:state>')
 @nocache
 def relay_routing(relay_id,state):
-	relays[ports.index(relay_id)].go(state)
-	pass
+	global relays
+	relays[int(relay_id)-1].go(state)
+	return 'ok'
 
 @app.route("/")
 @nocache
 def index():
+	global relays
 	args = sys.argv[1:]
 	ports = args[0::2]
 	names = args[1::2]
