@@ -1,0 +1,20 @@
+<!doctype html>
+<title>Relay</title>
+<link href="static/styles/default.css" rel="stylesheet">
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery-3.1.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/click.js') }}"></script>
+<div id="wrap">
+  <div id="button">
+    {% for x in names %}
+	<div id="butwrap" class="buttonWrapper">
+	  <div class="unselectable rss">
+	  <div id="labels{{ loop.index }}" class="labels"><a class='black'>{{ x }}</a></div>
+	  <div id="buttonwr">
+		<input type="checkbox" id="button{{ loop.index }}" />
+		<label class='checks' for="button{{ loop.index }}" id="{{ loop.index }}"><i></i></label>
+	  </div>
+	  </div>
+	</div>
+	{% endfor %}
+  </div>
+</div>
