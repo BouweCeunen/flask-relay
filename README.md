@@ -1,5 +1,7 @@
 # Raspberry pi GPIO relay interface with Flask
 
+Feel free to let me know if something isn't working as it should at bouwe.ceunen@gmail.com
+
 ### Get it running
 
 ```sh
