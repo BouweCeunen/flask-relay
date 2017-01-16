@@ -28,11 +28,21 @@ def relay_routing(relay_id,state):
 @nocache
 def index():
 	global relays
-	args = sys.argv[1:]
-	ports = args[0::2]
-	names = args[1::2]
-	relays = [Relay(int(port)) for port in ports]
-	return render_template('template.html',args=True,ports=ports,names=names)
+	if len(sys.argv) < 2:
+		msg = 'Usage: \n python relay.py (True|False) 7 Kitchenrelay 11 Livingroomrelay'
+		print(msg)
+		return msg
+	else:
+		inverse = sys.argv[1].lower()
+		if inverse in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh']:
+			inverse = True
+		else:
+			inverse = False
+		args = sys.argv[2:]
+		ports = args[0::2]
+		names = args[1::2]
+		relays = [Relay(int(port),inverse) for port in ports]
+		return render_template('template.html',args=True,ports=ports,names=names)
 
 if __name__ == "__main__":
 	app.run(

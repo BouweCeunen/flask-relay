@@ -5,23 +5,25 @@ Feel free to let me know if something isn't working as it should at bouwe.ceunen
 ### Get it running
 
 ```sh
-$ python relay.py
+$ python relay.py True
 ```
-This will display an empty screen, arguments are needed.
-Append the arguments so that the gpio pin is first and the name of the relay second.
 
+The first argument sets the inverse to True or False. So set this to True if your relays work with inverted logic and set to False if they don't.
 
-[![](http://www.raspberrypi-spy.co.uk/wp-content/uploads/2012/06/Raspberry-Pi-GPIO-Layout-Model-B-Plus-rotated-2700x900.png)](http://www.raspberrypi-spy.co.uk/wp-content/uploads/2012/06/Raspberry-Pi-GPIO-Layout-Model-B-Plus-rotated-2700x900.png)
+Append further arguments so that the gpio pin is first and the name of the relay second.
 
-Make sure you use the port numbers dislayed with the 'GPIO' annotation (GPIO BCM). So not the board numbers in the middle.
+[![](https://i.stack.imgur.com/sVvsB.jpg)](https://i.stack.imgur.com/sVvsB.jpg)
+
+Make sure you use the port numbers defined as GPIO BOARD. So not the numbers on the side with the GPIO annotation but the single board numbers in the middle.
 
 ```sh
-$ python relay.py 22 Kitchen 
+$ python relay.py True 22 Kitchen 
 ```
+
 You can append as many parameters as you want for as many relays as you have.
 
 ```sh
-$ python relay.py 22 Kitchen 04 Livingroom 27 Garage
+$ python relay.py True 22 Kitchen 04 Livingroom 27 Garage
 ```
 
 #### Interface
