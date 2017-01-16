@@ -19,7 +19,3 @@ class Relay:
 		else:
 			GPIO.output(self.port, self.inverse)
 		
-	def __del__(self):
-		GPIO.cleanup()
-
-

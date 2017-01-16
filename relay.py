@@ -41,6 +41,8 @@ def index():
 		args = sys.argv[2:]
 		ports = args[0::2]
 		names = args[1::2]
+		print(ports)
+		print(names)
 		relays = [Relay(int(port),inverse) for port in ports]
 		return render_template('template.html',args=True,ports=ports,names=names)
 
