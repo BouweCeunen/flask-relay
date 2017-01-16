@@ -23,7 +23,7 @@ $ python relay.py True 22 Kitchen
 You can append as many parameters as you want for as many relays as you have.
 
 ```sh
-$ python relay.py True 22 Kitchen 04 Livingroom 27 Garage
+$ python relay.py True 22 Kitchen 32 Livingroom 36 Garage
 ```
 
 #### Interface
