@@ -12,7 +12,11 @@
 	  <div class="unselectable rss">
 	  <div id="labels{{ loop.index }}" class="labels"><a class='black'>{{ x }}</a></div>
 	  <div id="buttonwr">
-		<input type="checkbox" id="button{{ loop.index }}" />
+	  	{% if checkeds[loop.index-1] == 'on' %}
+			<input type="checkbox" checked id="button{{ loop.index }}" />
+		{% else %}
+			<input type="checkbox" unchecked id="button{{ loop.index }}" />
+		{% endif %}
 		<label class='checks' for="button{{ loop.index }}" id="{{ loop.index }}"><i></i></label>
 	  </div>
 	  </div>
