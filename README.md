@@ -26,7 +26,7 @@ You can append as many parameters as you want for as many relays as you have.
 $ python relay.py True 22 Kitchen 32 Livingroom 36 Garage
 ```
 
-#### Interface
+### Interface
 Go to localhost:5000 (or ip address of your pi e.g. 192.168.1.115:5000) in your webbrowser (or change the Flask port in the python relay file) and try it out!
 
 [![](http://www.bouweceunen.com/flaskrelay/interface.png)](http://www.bouweceunen.com/flaskrelay/interface.png)
