@@ -1,4 +1,5 @@
-# Raspberry pi GPIO relay interface with Flask
+# Flask Relay - Raspberry pi GPIO relay interface with Flask
+Flask Relay controls your 5V relays with your raspberry pi by just running a python command with some arguments. It uses Flask (flask.pocoo.org) which uses Werkzeug a Web Server Gateway Interface (WSGI). It also uses an HTML interface which displays fancy CSS buttons to control the relays so you can access and turn on and off anything you want trough any webbrowser you want.
 
 Feel free to let me know if something isn't working as it should at bouwe.ceunen@gmail.com
 
